@@ -6,7 +6,7 @@ import streamlit as st
 import yfinance as yf
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 #Streamlit
-st.title('Simple Exponential Smoothing model)
+st.title('Simple Exponential Smoothing model')
 start_date=st.date_input('Select Start Date')
 end_date=st.date_input('Select End Date')
 #Import Data
@@ -42,6 +42,7 @@ plt.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red
 plt.plot(test.index,test_predictions_normal,label='Predicted Test',color='green')
 plt.legend()
 st.pyplot(plt)
+
 
 
 
