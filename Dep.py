@@ -33,7 +33,7 @@ future_pred=pd.DataFrame()
 future_pred['Date']=forecast_dates
 future_predicitions_normal=future_predicitions_normal.reset_index(drop=True)
 future_pred['Close']=future_predicitions_normal
-st.write("Static Table:")
+st.write("Forecasts:")
 st.table(future_pred)
 #Visualization
 st.subheader('Forecasts for next 30 days')
@@ -45,6 +45,7 @@ plt.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red
 plt.plot(test.index,test_predictions_normal,label='Predicted Test',color='green')
 plt.legend()
 st.pyplot(plt)
+
 
 
 
