@@ -8,7 +8,6 @@ from statsmodels.tsa.holtwinters import ExponentialSmoothing
 #Streamlit
 start_date=st.date_input('Select Start Date')
 end_date=st.date_input('Select End Date')
-st.subheader('Forecasts for next 30 days')
 #Import Data
 df=yf.download('AAPL',start=start_date,end=end_date)
 df=df.dropna()
@@ -42,6 +41,7 @@ plt.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red
 plt.plot(test.index,test_predictions_normal,label='Predicted Test',color='green')
 plt.legend()
 st.pyplot(plt)
+
 
 
 
