@@ -39,13 +39,14 @@ st.table(future_pred)
 st.subheader('Forecasts for next 30 days')
 st.table(future_pred)
 fig, ax = plt.subplots()
-ax.figure(figsize=(14,5))
+plt.figure(figsize=(14,5))
 plt.plot(df['Close'],label='Actual',color='blue')
 plt.axvline(x=train.index[-1],color='grey',linestyle='--',label='Train-Test Split')
-ax.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red')
+plt.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red')
 plt.plot(test.index,test_predictions_normal,label='Predicted Test',color='green')
 plt.legend()
 st.pyplot(fig)
+
 
 
 
