@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-import yfinance as yt
+import yfinance as yf
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 #Streamlit
 st.title('Apple stock prices 30 days forecast')
@@ -44,6 +44,7 @@ plt.axvline(x=train.index[-1],color='grey',linestyle='--',label='Train-Test Spli
 plt.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red')
 plt.plot(test.index,test_predictions_normal,label='Predicted Test',color='green')
 plt.legend()
+
 
 
 
