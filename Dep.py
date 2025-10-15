@@ -11,8 +11,6 @@ start_date=st.date_input('Select Start Date')
 end_date=st.date_input('Select End Date')
 #Import Data
 df=yf.download('AAPL',start=start_date,end=end_date)
-st.subheader('Data Of First 5 Rows')
-st.write(df.head())
 df=df.dropna()
 #EDA
 df1_org=df.diff()
@@ -44,6 +42,7 @@ plt.plot(forecast_dates,future_predicitions_normal,label='forecasted',color='red
 plt.plot(test.index,test_predictions_normal,label='Predicted Test',color='green')
 plt.legend()
 st.pyplot(plt)
+
 
 
 
