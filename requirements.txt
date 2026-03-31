@@ -1,5 +1,5 @@
 altair<5
-
+standard-imghdr
 pandas
 numpy
 matplotlib
